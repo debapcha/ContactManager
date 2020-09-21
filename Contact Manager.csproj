@@ -1,0 +1,121 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{176BA096-11FB-461F-9E5C-D90F54FE8616}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Contact_Manager</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\ContactManager\v16\.suo" />
+    <None Include="appsettings.Development.json" />
+    <None Include="appsettings.json" />
+    <None Include="Areas\Identity\Pages\_ViewStart.cshtml" />
+    <None Include="Pages\Contacts\Create.cshtml" />
+    <None Include="Pages\Contacts\Delete.cshtml" />
+    <None Include="Pages\Contacts\Details.cshtml" />
+    <None Include="Pages\Contacts\Details2.cshtml" />
+    <None Include="Pages\Contacts\Edit.cshtml" />
+    <None Include="Pages\Contacts\Index.cshtml" />
+    <None Include="Pages\Error.cshtml" />
+    <None Include="Pages\Index.cshtml" />
+    <None Include="Pages\Privacy.cshtml" />
+    <None Include="Pages\Shared\_Layout.cshtml" />
+    <None Include="Pages\Shared\_LoginPartial.cshtml" />
+    <None Include="Pages\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Pages\_ViewImports.cshtml" />
+    <None Include="Pages\_ViewStart.cshtml" />
+    <None Include="Properties\launchSettings.json" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorization\ContactAdministratorsAuthorizationHandler.cs" />
+    <Compile Include="Authorization\ContactIsOwnerAuthorizationHandler.cs" />
+    <Compile Include="Authorization\ContactManagerAuthorizationHandler.cs" />
+    <Compile Include="Authorization\ContactOperations.cs" />
+    <Compile Include="Data\ApplicationDbContext.cs" />
+    <Compile Include="Data\SeedData.cs" />
+    <Compile Include="Migrations\20190710234824_initial.cs" />
+    <Compile Include="Migrations\20190710234824_initial.Designer.cs">
+      <DependentUpon>20190710234824_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190711183526_userID_Status.cs" />
+    <Compile Include="Migrations\20190711183526_userID_Status.Designer.cs">
+      <DependentUpon>20190711183526_userID_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Pages\Contacts\Create.cshtml.cs" />
+    <Compile Include="Pages\Contacts\Delete.cshtml.cs" />
+    <Compile Include="Pages\Contacts\Details.cshtml.cs" />
+    <Compile Include="Pages\Contacts\Details2.cshtml.cs" />
+    <Compile Include="Pages\Contacts\DI_BasePageModel.cs" />
+    <Compile Include="Pages\Contacts\Edit.cshtml.cs" />
+    <Compile Include="Pages\Contacts\Index.cshtml.cs" />
+    <Compile Include="Pages\Error.cshtml.cs" />
+    <Compile Include="Pages\Index.cshtml.cs" />
+    <Compile Include="Pages\Privacy.cshtml.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Startup2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wwwroot\css\site.css" />
+    <Content Include="wwwroot\favicon.ico" />
+    <Content Include="wwwroot\js\site.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <Content Include="wwwroot\lib\jquery\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\Contact Manager\v16\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
