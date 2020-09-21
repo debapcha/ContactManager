@@ -5,6 +5,16 @@
     <UserSecretsId>aspnet-ContactManager-89C27F51-1427-4F4A-BCB3-7AB8F67AC457</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="ContactManager\.vs\ContactManager\config\applicationhost.config" />
+    <None Include="ContactManager\.vs\ContactManager\DesignTimeBuild\.dtbcache" />
+    <None Include="ContactManager\.vs\ContactManager\v16\Server\sqlite3\db.lock" />
+    <None Include="ContactManager\.vs\ContactManager\v16\Server\sqlite3\storage.ide" />
+    <None Include="ContactManager\.vs\ContactManager\v16\Server\sqlite3\storage.ide-shm" />
+    <None Include="ContactManager\.vs\ContactManager\v16\Server\sqlite3\storage.ide-wal" />
+    <None Include="ContactManager\ContactManager.sln" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.0.0" />
